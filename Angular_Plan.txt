@@ -1,0 +1,65 @@
+ANGULAR APP PLAN
+
+DEVELOPMENT OVERVIEW
+- Frontend: Angular (TypeScript, HTML, CSS)
+- Backend: C# .NET Web API
+- Database: SQL Server
+- Data Access: ADO.NET (instead of Entity Framework)
+- Communication: HTTP (REST API)
+
+APP OVERVIEW
+- Features
+	- Add a new personal information entry
+	- View the list of entries
+	- Update an existing entry
+	- Delete an entry
+	- Form validation for input fields
+
+FRONTEND DEVELOPMENT
+- Create a new Angular Project
+- Generate a Service (personal-info.service.ts)
+	- Use HttpClient to call the backend API
+- Create Components
+	- PersonalInfoFormComponent ? Handles form submission
+	- PersonalInfoListComponent ? Displays a list of records
+- Implement Validation in the Form
+	- Required fields (FirstName, LastName, Email)
+	- Email format validation
+	- Phone number must be numeric
+- Use Bootstrap for Styling
+
+WEB API DEVELOPMENT/CONFIGURATION
+- Create a new ASP.NET Core Web API Project
+- Set up SQL Server Connection (Using ADO.NET)
+	- Define a connectionString in appsettings.json
+	- Use SqlConnection, SqlCommand, and SqlDataReader
+- Implement CRUD Operations
+	- GET /api/personalinfo ? Fetch all records
+	- GET /api/personalinfo/{id} ? Fetch a specific record
+	- POST /api/personalinfo ? Insert a new record
+	- PUT /api/personalinfo/{id} ? Update an existing record
+	- DELETE /api/personalinfo/{id} ? Delete a record
+
+DATABASE MODELLING
+- Table Name - UserInfo
+- Columns
+Name			Data Type						Description
+ID				INT (Primary Key, Identity)		Unique identifier for each record
+FirstName		NVARCHAR(100)					User's first name
+LastName		NVARCHAR(100)					User's last name
+Email			NVARCHAR(255)					User's email
+PhoneNumber		NVARCHAR(15)					User's phone number
+	
+API + DATABASE
+- The Angular app calls the C# Web API using HTTP requests
+- The API interacts with SQL Server using ADO.NET
+- The database stores user data persistently
+
+UNIT TESTING
+- Frontend
+	- Ensure form validation and API calls work
+- Backend
+	- Write tests for the API endpoints
+- Postman Testing
+	- Verifying API response
+
