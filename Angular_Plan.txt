@@ -1,48 +1,48 @@
 ANGULAR APP PLAN
 
 DEVELOPMENT OVERVIEW
-- Frontend: Angular (TypeScript, HTML, CSS)
-- Backend: C# .NET Web API
-- Database: SQL Server
-- Data Access: ADO.NET (instead of Entity Framework)
-- Communication: HTTP (REST API)
+1. Frontend: Angular (TypeScript, HTML, CSS)
+2. Backend: C# .NET Web API
+3. Database: SQL Server
+4. Data Access: ADO.NET (instead of Entity Framework)
+5. Communication: HTTP (REST API)
 
 APP OVERVIEW
-- Features
-	- Add a new personal information entry
-	- View the list of entries
-	- Update an existing entry
-	- Delete an entry
-	- Form validation for input fields
+I. Features
+	1. Add a new personal information entry
+	2. View the list of entries
+	3. Update an existing entry
+	4. Delete an entry
+	5. Form validation for input fields
 
 FRONTEND DEVELOPMENT
-- Create a new Angular Project
-- Generate a Service (personal-info.service.ts)
-	- Use HttpClient to call the backend API
-- Create Components
-	- PersonalInfoFormComponent ? Handles form submission
-	- PersonalInfoListComponent ? Displays a list of records
-- Implement Validation in the Form
-	- Required fields (FirstName, LastName, Email)
-	- Email format validation
-	- Phone number must be numeric
-- Use Bootstrap for Styling
+I. Create a new Angular Project
+II. Generate a Service (personal-info.service.ts)
+	1. Use HttpClient to call the backend API
+III. Create Components
+	1. PersonalInfoFormComponent ? Handles form submission
+	2. PersonalInfoListComponent ? Displays a list of records
+IV. Implement Validation in the Form
+	1. Required fields (FirstName, LastName, Email)
+	2. Email format validation
+	3. Phone number must be numeric
+V. Use Bootstrap for Styling
 
 WEB API DEVELOPMENT/CONFIGURATION
-- Create a new ASP.NET Core Web API Project
-- Set up SQL Server Connection (Using ADO.NET)
-	- Define a connectionString in appsettings.json
-	- Use SqlConnection, SqlCommand, and SqlDataReader
-- Implement CRUD Operations
-	- GET /api/personalinfo ? Fetch all records
-	- GET /api/personalinfo/{id} ? Fetch a specific record
-	- POST /api/personalinfo ? Insert a new record
-	- PUT /api/personalinfo/{id} ? Update an existing record
-	- DELETE /api/personalinfo/{id} ? Delete a record
+I. Create a new ASP.NET Core Web API Project
+II. Set up SQL Server Connection (Using ADO.NET)
+	1. Define a connectionString in appsettings.json
+	2. Use SqlConnection, SqlCommand, and SqlDataReader
+III. Implement CRUD Operations
+	1. GET /api/personalinfo ? Fetch all records
+	2. GET /api/personalinfo/{id} ? Fetch a specific record
+	3. POST /api/personalinfo ? Insert a new record
+	4. PUT /api/personalinfo/{id} ? Update an existing record
+	5. DELETE /api/personalinfo/{id} ? Delete a record
 
 DATABASE MODELLING
-- Table Name - UserInfo
-- Columns
+1. Table Name - UserInfo
+2. Columns
 Name			Data Type						Description
 ID				INT (Primary Key, Identity)		Unique identifier for each record
 FirstName		NVARCHAR(100)					User's first name
@@ -51,15 +51,15 @@ Email			NVARCHAR(255)					User's email
 PhoneNumber		NVARCHAR(15)					User's phone number
 	
 API + DATABASE
-- The Angular app calls the C# Web API using HTTP requests
-- The API interacts with SQL Server using ADO.NET
-- The database stores user data persistently
+1. The Angular app calls the C# Web API using HTTP requests
+2. The API interacts with SQL Server using ADO.NET
+3. The database stores user data persistently
 
 UNIT TESTING
-- Frontend
+I. Frontend
 	- Ensure form validation and API calls work
-- Backend
+II. Backend
 	- Write tests for the API endpoints
-- Postman Testing
+III. Postman Testing
 	- Verifying API response
 
