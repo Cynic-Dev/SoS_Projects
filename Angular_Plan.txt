@@ -44,11 +44,11 @@ DATABASE MODELLING
 1. Table Name - UserInfo
 2. Columns
 Name			Data Type						Description
-ID				INT (Primary Key, Identity)		Unique identifier for each record
-FirstName		NVARCHAR(100)					User's first name
-LastName		NVARCHAR(100)					User's last name
-Email			NVARCHAR(255)					User's email
-PhoneNumber		NVARCHAR(15)					User's phone number
+ID			INT (Primary Key, Identity)				Unique identifier for each record
+FirstName		VARCHAR(50)						User's first name
+LastName		VARCHAR(50)						User's last name
+Email			VARCHAR(255)						User's email
+PhoneNumber		VARCHAR(15)						User's phone number
 	
 API + DATABASE
 1. The Angular app calls the C# Web API using HTTP requests
